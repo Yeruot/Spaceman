@@ -1,0 +1,288 @@
+fileFormatVersion: 2
+guid: 373fc3f7f88c14352a03a772d62b7ab7
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: animation_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 556
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 556
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 556
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 556
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 556
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 556
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 556
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 556
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 556
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 331
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 331
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 331
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 331
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 331
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 331
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 331
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 331
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 331
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: animation_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 77
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: animation_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 77
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: animation_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 77
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: animation_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 77
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: animation_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 77
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: animation_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 77
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: animation_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 77
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: animation_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 77
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: animation_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 77
+        width: 149
+        height: 225
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

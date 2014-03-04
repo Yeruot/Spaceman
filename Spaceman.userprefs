@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/IntroScript.cs">
+    <Files>
+      <File FileName="Assets/World/World Base/worldManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Player/Caveman/Scripts/PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Input/Scripts/InputController.cs" Line="1" Column="1" />
+      <File FileName="Assets/World/Voxels/Base/voxel.cs" Line="1" Column="1" />
+      <File FileName="Assets/GUI/Controls/Scripts/DPadDownController.cs" Line="1" Column="1" />
+      <File FileName="Assets/IntroScript.cs" Line="17" Column="16" />
+      <File FileName="../../mikoanimation/IntroAnimation.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

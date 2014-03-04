@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: cffed1443010cb24fb8f2cf17b732c0f
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CavemanTopDownMove_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 317
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: CavemanTopDownMove_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 317
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: CavemanTopDownMove_2
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 317
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: CavemanTopDownMove_3
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 220
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: CavemanTopDownMove_4
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 217
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: CavemanTopDownMove_5
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 221
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: CavemanTopDownMove_6
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 122
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: CavemanTopDownMove_7
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 118
+        width: 27
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: CavemanTopDownMove_8
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 121
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: CavemanTopDownMove_9
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 25
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: CavemanTopDownMove_10
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 24
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: CavemanTopDownMove_11
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 24
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 
