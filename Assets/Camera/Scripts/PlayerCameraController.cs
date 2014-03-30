@@ -12,7 +12,11 @@ public class PlayerCameraController : MonoBehaviour {
 	{
 		get {return instance;}
 	}
-	
+
+	//1 represents top-down camera
+	//2 represents sidescrolling camera
+	public static int CameraOrientation = 1;
+
 	void Awake(){
 		// this code makes sure that only one instance of the camera exists
 		// at a time
@@ -57,15 +61,15 @@ public class PlayerCameraController : MonoBehaviour {
 	
 	public void ChangeView(){
 		print ("Change View Triggered");
-		if (transform.position.y > 0) {
-			print ("Hello");
+		if (CameraOrientation == 1) {
 			transform.Rotate (-45, 0, 0, Space.World);
 			transform.Translate (0, -1.3F, -2, Space.World);
+			CameraOrientation = 2;
 		} 
 		else {
-			print ("Hello2");
 			transform.Rotate (45, 0, 0, Space.World);
 			transform.Translate (0, 1.3F, 2,  Space.World);
+			CameraOrientation = 1;
 		}
 	}
 }
