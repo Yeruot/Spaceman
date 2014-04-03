@@ -63,6 +63,15 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKey ("w")) {
+			moveUp ();
+		} else if (Input.GetKey ("s")) {
+			moveDown ();
+		} else if (Input.GetKey ("a")) {
+			moveLeft ();
+		} else if (Input.GetKey ("d")) {
+			moveRight();
+		}
 		charController = instance.GetComponent<CharacterController>();
 
 		instance.verticalSpeed -= gravity;

@@ -8,13 +8,14 @@ public class clubController : MonoBehaviour {
 		Destroy (gameObject, 0.2f);
 	}
 
-	void OnTriggerEnter(Collider other){
-		print ("got triggered");
-		if(other.tag == "Voxel"){
-			print ("destroying");
-			Destroy (other.gameObject);
-			Destroy (gameObject);
-		}
-	}
+    void OnCollisionEnter(Collision collision) {
+        Collider other = collision.collider;
+        if(other.tag == "Voxel"){
+            Chunk chunk = other.gameObject.GetComponent<Chunk>() as Chunk;
+            print (collision.contacts[0].point);
+            chunk.hit(collision.contacts[0].point.x, collision.contacts[0].point.y, collision.contacts[0].point.z);
+            Destroy( gameObject );
+        }
+    }
 
 }

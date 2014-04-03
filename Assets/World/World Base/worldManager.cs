@@ -21,9 +21,9 @@ public class worldManager : MonoBehaviour {
 	void Start () {
 		instance = this;
 		
-		height = Random.Range(3, 6);
-		width = Random.Range(20, 25);
-		length = Random.Range(20, 25);
+		height = Random.Range(3, 9);
+		width = Random.Range(51, 55);
+		length = Random.Range(50, 55);
 
 		print (width + "," + height + "," + length);
 
