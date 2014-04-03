@@ -5,6 +5,7 @@ public class World : MonoBehaviour
 {
     
     public GameObject chunk;
+	public GameObject cow;
     public GameObject[,,] chunks;
     public int chunkSize = 16;
     public byte[,,] data;
@@ -60,6 +61,13 @@ public class World : MonoBehaviour
                 break;
             }
         }
+
+		for (int i = 0; i < worldY; i++) {
+			if((data[worldX/2, i, worldZ/2]) == 0) {
+				Instantiate(cow, new Vector3 (worldX / 4, i/2+1, worldZ / 4), Quaternion.identity);
+				break;
+			}
+		}
     }
   
     int PerlinNoise (int x, int y, int z, float scale, float height, float power)
