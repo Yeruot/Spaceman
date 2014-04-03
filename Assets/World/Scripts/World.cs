@@ -77,8 +77,8 @@ public class World : MonoBehaviour
         }
 
 		for (int i = 0; i < worldY; i++) {
-			if((data[worldX/2, i, worldZ/2]) == 0) {
-				GideonController.Instance.gameObject.transform.position = new Vector3 (worldX / 4, i/2+1, worldZ / 4);
+			if((data[worldX-16, i, worldZ-16]) == 0) {
+				GideonController.Instance.gameObject.transform.position = new Vector3 ((worldX - 16)/2, i/2+1, (worldZ - 16)/2);
 				break;
 			}
 		}
@@ -95,6 +95,7 @@ public class World : MonoBehaviour
 		for(int k = 0; k < 50; k++){
 			for (int i = 0; i < worldY; i++) {
 				int temp = Random.Range(1,50);
+                //int tempZ = Random.Range (1, 50);
 				if((data[temp, i, temp]) == 0) {
 					Instantiate(cow, new Vector3 (temp/2, i/2+1, temp/2), Quaternion.identity);
 					break;
