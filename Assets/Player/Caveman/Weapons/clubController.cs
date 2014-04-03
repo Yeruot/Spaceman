@@ -13,7 +13,7 @@ public class clubController : MonoBehaviour
     void OnCollisionEnter (Collision collision)
     {
         Collider other = collision.collider;
-        if (other.tag == "Voxel") {
+        /*if (other.tag == "Voxel") {
             Chunk chunk = other.gameObject.GetComponent<Chunk> () as Chunk;
             float xoffset = 0;
             float yoffset = 0;
@@ -40,7 +40,7 @@ public class clubController : MonoBehaviour
                       collision.contacts [0].point.y + yoffset, 
                       collision.contacts [0].point.z + zoffset);
             Destroy (gameObject);
-        }
+        }*/
 
     }
 

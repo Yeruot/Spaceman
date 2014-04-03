@@ -37,6 +37,14 @@ public class World : MonoBehaviour
                 }
             }
         }
+        
+        for(int i = 0; i < 20; i++) {
+            int x = Random.Range(5, 59);
+            int z = Random.Range(5, 59);
+            int height = Random.Range(3, 7);
+            Tree t = new Tree(x, z, height, data);
+            t.Build(data);
+        }
 
         house = new House (worldX - 20, worldZ - 20, data);
         house.Build (data);
@@ -109,7 +117,6 @@ public class World : MonoBehaviour
         int dx = Mathf.FloorToInt (x * 2);
         int dy = Mathf.CeilToInt (y * 2);
         int dz = Mathf.FloorToInt (z * 2);
-        print (dx + " " + dy + " " + dz);
         data [dx, dy, dz] = 0;
         Chunk ch = chunks[dx/16, dy/16, dz/16].GetComponent<Chunk>() as Chunk;
         ch.GenerateMesh();

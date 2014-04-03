@@ -51,6 +51,9 @@ public class House : Object
                             data [i, k, j] = 3;
                         }
                     }
+                    if((i == x + houseWidth/2 || i == x+houseWidth/2-1) && k < y+2 && j == z) {
+                        data[i,k,j] = 0;
+                    }
                 }
             }
         }

@@ -7,7 +7,6 @@ public class AttackButtonController : InteractiveController {
 	}
 
 	public override void OnTouched(){
-		print ("Attack button pressed");
 		PlayerController.Instance.attack();
 	}
 }

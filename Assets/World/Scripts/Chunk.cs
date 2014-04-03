@@ -16,6 +16,8 @@ public class Chunk : MonoBehaviour
     private Vector2 tDirt = new Vector2 (2, 0);
     private Vector2 tGrassTop = new Vector2 (0, 0);
     private Vector2 tWood = new Vector2 (0, 1);
+    private Vector2 tLeaves = new Vector2 (1, 1);
+    private Vector2 tTree = new Vector2 (2, 1);
     private Mesh mesh;
     private MeshCollider col;
     private int faceCount;
@@ -118,6 +120,10 @@ public class Chunk : MonoBehaviour
             texturePos = tGrassTop;
         } else if (Block (x, y, z) == 3) {
             texturePos = tWood;
+        } else if (Block (x, y, z) == 4) {
+            texturePos = tTree;
+        } else if (Block (x, y, z) == 5) {
+            texturePos = tLeaves;
         }
    
         Cube (texturePos);
@@ -145,6 +151,10 @@ public class Chunk : MonoBehaviour
             }
         } else if (Block (x, y, z) == 3) {
             texturePos = tWood;
+        } else if (Block (x, y, z) == 4) {
+            texturePos = tTree;
+        } else if (Block (x, y, z) == 5) {
+            texturePos = tLeaves;
         }
    
         Cube (texturePos);
@@ -172,6 +182,10 @@ public class Chunk : MonoBehaviour
             }
         } else if (Block (x, y, z) == 3) {
             texturePos = tWood;
+        } else if (Block (x, y, z) == 4) {
+            texturePos = tTree;
+        } else if (Block (x, y, z) == 5) {
+            texturePos = tLeaves;
         }
    
         Cube (texturePos);
@@ -199,6 +213,10 @@ public class Chunk : MonoBehaviour
             }
         } else if (Block (x, y, z) == 3) {
             texturePos = tWood;
+        } else if (Block (x, y, z) == 4) {
+            texturePos = tTree;
+        } else if (Block (x, y, z) == 5) {
+            texturePos = tLeaves;
         }
    
         Cube (texturePos);
@@ -226,6 +244,10 @@ public class Chunk : MonoBehaviour
             }
         } else if (Block (x, y, z) == 3) {
             texturePos = tWood;
+        } else if (Block (x, y, z) == 4) {
+            texturePos = tTree;
+        } else if (Block (x, y, z) == 5) {
+            texturePos = tLeaves;
         }
    
         Cube (texturePos);
@@ -249,6 +271,10 @@ public class Chunk : MonoBehaviour
             texturePos = tGrass;
         } else if (Block (x, y, z) == 3) {
             texturePos = tWood;
+        } else if (Block (x, y, z) == 4) {
+            texturePos = tTree;
+        } else if (Block (x, y, z) == 5) {
+            texturePos = tLeaves;
         }
    
         Cube (texturePos);
