@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: 72c38e03a0749474fae9f5798dc84366
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Cow_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 192
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 192
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 192
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 192
+        width: 61
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 128
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_5
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 128
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_6
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 128
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_7
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 128
+        width: 61
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 64
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_9
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 64
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_10
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 64
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_11
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 64
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 59
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_13
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_14
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: Cow_15
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 60
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 

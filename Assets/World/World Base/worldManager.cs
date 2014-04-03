@@ -6,6 +6,7 @@ public class worldManager : MonoBehaviour {
 
 	public Transform voxelPrefab;
 	public Transform worldBasePrefab;
+	public Transform cowPrefab;
 
 	private Transform worldBase;
 	
