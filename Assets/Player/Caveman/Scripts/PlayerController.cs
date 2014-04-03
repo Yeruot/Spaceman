@@ -52,9 +52,9 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Start () {
-		instance.audioSources = GetComponents<AudioSource>();
-		instance.grunt = audioSources[0];
-		instance.movementVector = new Vector3(0f,0f,0f);
+		this.audioSources = GetComponents<AudioSource>();
+		this.grunt = audioSources[0];
+		this.movementVector = new Vector3(0f,0f,0f);
 
 		currentDirection = 2;
 
@@ -72,18 +72,18 @@ public class PlayerController : MonoBehaviour {
 		} else if (Input.GetKey ("d")) {
 			moveRight();
 		}
-		charController = instance.GetComponent<CharacterController>();
+		charController = this.GetComponent<CharacterController>();
 
-		instance.verticalSpeed -= gravity;
-		if(instance.verticalSpeed <= -1){
-			instance.verticalSpeed = -1;
+		this.verticalSpeed -= gravity;
+		if(this.verticalSpeed <= -1){
+			this.verticalSpeed = -1;
 		}
-		instance.movementVector.y = instance.verticalSpeed;
+		this.movementVector.y = this.verticalSpeed;
 
-		instance.flags = charController.Move(instance.movementVector * Time.deltaTime);
+		this.flags = charController.Move(this.movementVector * Time.deltaTime);
 
-		instance.movementVector.x = 0;
-		instance.movementVector.z = 0;
+		this.movementVector.x = 0;
+		this.movementVector.z = 0;
 	}
 
 	public void attack(){
@@ -109,41 +109,40 @@ public class PlayerController : MonoBehaviour {
         }
         Physics.IgnoreCollision (attackingWeapon.collider, collider);
 		grunt.Play();
-		instance.animator.SetTrigger("Attack");
+		this.animator.SetTrigger("Attack");
 	}
 
 	public void jump(){
-        print ("fucL");
 		if((flags & CollisionFlags.Below) != 0)
-			instance.verticalSpeed = jumpSpeed;
+			this.verticalSpeed = jumpSpeed;
 	}
 
 	public void moveLeft(){
-		instance.animator.SetInteger("Direction", 3);
+		this.animator.SetInteger("Direction", 3);
 
 		currentDirection = 3;
-		instance.movementVector += Vector3.left;
+		this.movementVector += Vector3.left;
 	}
 
 	public void moveRight(){
-		instance.animator.SetInteger("Direction", 1);
+		this.animator.SetInteger("Direction", 1);
 
 		currentDirection = 1;
-		instance.movementVector += Vector3.right;
+		this.movementVector += Vector3.right;
 
 	}
 
 	public void moveUp(){
-		instance.animator.SetInteger("Direction", 0);
+		this.animator.SetInteger("Direction", 0);
 
 		currentDirection = 0;
-		instance.movementVector += Vector3.forward;
+		this.movementVector += Vector3.forward;
 	}
 
 	public void moveDown(){
-		instance.animator.SetInteger("Direction", 2);
+		this.animator.SetInteger("Direction", 2);
 
 		currentDirection = 2;
-		instance.movementVector += Vector3.back;
+		this.movementVector += Vector3.back;
 	}
 }

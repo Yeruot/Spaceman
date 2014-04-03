@@ -14,6 +14,7 @@ public class clubController : MonoBehaviour
     {
         Collider other = collision.collider;
         if (other.tag == "Voxel") {
+			print("hit voxel");
             Chunk chunk = other.gameObject.GetComponent<Chunk> () as Chunk;
             float xoffset = 0;
             float yoffset = 0;
@@ -40,7 +41,11 @@ public class clubController : MonoBehaviour
                       collision.contacts [0].point.y + yoffset, 
                       collision.contacts [0].point.z + zoffset);
             Destroy (gameObject);
-        }
+        } else if(other.tag == "Cow"){
+			print("hit cow");
+			CowController cowctrl = other.gameObject.GetComponent<CowController>();
+			cowctrl.hit();
+		}
 
     }
 

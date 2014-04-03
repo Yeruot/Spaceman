@@ -61,11 +61,12 @@ public class World : MonoBehaviour
                 break;
             }
         }
-
-		for (int i = 0; i < worldY; i++) {
-			if((data[worldX/2, i, worldZ/2]) == 0) {
-				Instantiate(cow, new Vector3 (worldX / 4, i/2+1, worldZ / 4), Quaternion.identity);
-				break;
+		for(int k = 0; k < 50; k++){
+			for (int i = 0; i < worldY; i++) {
+				if((data[Random.Range(1,50), i, Random.Range(1,50)]) == 0) {
+					Instantiate(cow, new Vector3 (Random.Range(2,50), i/2+1, Random.Range(2,50)), Quaternion.identity);
+					break;
+				}
 			}
 		}
     }
