@@ -11,9 +11,11 @@ public class Chunk : MonoBehaviour
     private List<int> newTriangles = new List<int> ();
     private List<Vector2> newUV = new List<Vector2> ();
     private float tUnit = 0.25f;
-    private Vector2 tStone = new Vector2 (1, 0);
+    private Vector2 tStone = new Vector2 (3, 0);
     private Vector2 tGrass = new Vector2 (1, 0);
+    private Vector2 tDirt = new Vector2 (2, 0);
     private Vector2 tGrassTop = new Vector2 (0, 0);
+    private Vector2 tWood = new Vector2 (0, 1);
     private Mesh mesh;
     private MeshCollider col;
     private int faceCount;
@@ -114,6 +116,8 @@ public class Chunk : MonoBehaviour
             texturePos = tStone;
         } else if (Block (x, y, z) == 2) {
             texturePos = tGrassTop;
+        } else if (Block (x, y, z) == 3) {
+            texturePos = tWood;
         }
    
         Cube (texturePos);
@@ -134,7 +138,13 @@ public class Chunk : MonoBehaviour
         if (Block (x, y, z) == 1) {
             texturePos = tStone;
         } else if (Block (x, y, z) == 2) {
-            texturePos = tGrass;
+            if(Block (x, y+1, z) == 0) {
+                texturePos = tGrass;
+            } else {
+                texturePos = tDirt;
+            }
+        } else if (Block (x, y, z) == 3) {
+            texturePos = tWood;
         }
    
         Cube (texturePos);
@@ -155,7 +165,13 @@ public class Chunk : MonoBehaviour
         if (Block (x, y, z) == 1) {
             texturePos = tStone;
         } else if (Block (x, y, z) == 2) {
-            texturePos = tGrass;
+            if(Block (x, y+1, z) == 0) {
+                texturePos = tGrass;
+            } else {
+                texturePos = tDirt;
+            }
+        } else if (Block (x, y, z) == 3) {
+            texturePos = tWood;
         }
    
         Cube (texturePos);
@@ -176,7 +192,13 @@ public class Chunk : MonoBehaviour
         if (Block (x, y, z) == 1) {
             texturePos = tStone;
         } else if (Block (x, y, z) == 2) {
-            texturePos = tGrass;
+            if(Block (x, y+1, z) == 0) {
+                texturePos = tGrass;
+            } else {
+                texturePos = tDirt;
+            }
+        } else if (Block (x, y, z) == 3) {
+            texturePos = tWood;
         }
    
         Cube (texturePos);
@@ -197,7 +219,13 @@ public class Chunk : MonoBehaviour
         if (Block (x, y, z) == 1) {
             texturePos = tStone;
         } else if (Block (x, y, z) == 2) {
-            texturePos = tGrass;
+            if(Block (x, y+1, z) == 0) {
+                texturePos = tGrass;
+            } else {
+                texturePos = tDirt;
+            }
+        } else if (Block (x, y, z) == 3) {
+            texturePos = tWood;
         }
    
         Cube (texturePos);
@@ -219,6 +247,8 @@ public class Chunk : MonoBehaviour
             texturePos = tStone;
         } else if (Block (x, y, z) == 2) {
             texturePos = tGrass;
+        } else if (Block (x, y, z) == 3) {
+            texturePos = tWood;
         }
    
         Cube (texturePos);

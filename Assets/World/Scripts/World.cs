@@ -12,6 +12,8 @@ public class World : MonoBehaviour
     public int worldX = 16;
     public int worldY = 16;
     public int worldZ = 16;
+
+    private House house;
     
     // Use this for initialization
     void Start ()
@@ -22,8 +24,8 @@ public class World : MonoBehaviour
         for (int x=0; x<worldX; x++) {
             for (int z=0; z<worldZ; z++) {
                 int stone = PerlinNoise (x, 0, z, 10, 3, 1.2f);
-                stone += PerlinNoise (x, 300, z, 20, 8, 0) + 10;
-                int dirt = PerlinNoise (x, 100, z, 50, 3, 0) + 1;
+                stone += PerlinNoise (x, 300, z, 20, 8, 1) + 10;
+                int dirt = PerlinNoise (x, 100, z, 70, 9, 1) + 1;
                 
                 for (int y=0; y<worldY; y++) {
                     if (y <= stone) {
@@ -35,6 +37,9 @@ public class World : MonoBehaviour
                 }
             }
         }
+
+        house = new House (worldX - 20, worldZ - 20, data);
+        house.Build (data);
         
         
         chunks = new GameObject[Mathf.FloorToInt (worldX / chunkSize), Mathf.FloorToInt (worldY / chunkSize), Mathf.FloorToInt (worldZ / chunkSize)];
