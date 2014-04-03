@@ -64,4 +64,8 @@ public class GideonController : MonoBehaviour {
 		movementVector.x = 0;
 		movementVector.z = 0;
 	}
+
+	public void QuestComplete(){
+		animator.SetBool("Glasses", true);
+	}
 }
