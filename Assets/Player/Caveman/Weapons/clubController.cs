@@ -14,6 +14,7 @@ public class clubController : MonoBehaviour
     {
         Collider other = collision.collider;
         /*if (other.tag == "Voxel") {
+			print("hit voxel");
             Chunk chunk = other.gameObject.GetComponent<Chunk> () as Chunk;
             float xoffset = 0;
             float yoffset = 0;
@@ -41,7 +42,15 @@ public class clubController : MonoBehaviour
                       collision.contacts [0].point.z + zoffset);
             Destroy (gameObject);
         }*/
-
+        if(other.tag == "Cow"){
+			print("hit cow");
+			CowController cowctrl = other.gameObject.GetComponent<CowController>();
+			cowctrl.hit();
+		} else if(other.tag == "Gideon"){
+			int index = Inventory.Instance.GetIndexOfItemName("Glasses");
+			if(index >= 0){
+				Inventory.Instance.RemoveItem(index);
+			}
+		}
     }
-
 }

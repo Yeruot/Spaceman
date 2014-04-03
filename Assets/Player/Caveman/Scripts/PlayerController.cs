@@ -144,22 +144,29 @@ public class PlayerController : MonoBehaviour
 
         currentDirection = 1;
         instance.movementVector += Vector3.right;
-
     }
 
-    public void moveUp ()
-    {
-        instance.animator.SetInteger ("Direction", 0);
+	public void moveUp(){
+		this.animator.SetInteger("Direction", 0);
 
-        currentDirection = 0;
-        instance.movementVector += Vector3.forward;
-    }
+		currentDirection = 0;
+		this.movementVector += Vector3.forward;
+	}
 
-    public void moveDown ()
-    {
-        instance.animator.SetInteger ("Direction", 2);
+	public void moveDown(){
+		this.animator.SetInteger("Direction", 2);
 
-        currentDirection = 2;
-        instance.movementVector += Vector3.back;
-    }
+		currentDirection = 2;
+		this.movementVector += Vector3.back;
+	}
+
+	void OnCollisionEnter (Collision collision){
+		Collider other = collision.collider;
+		print ("suuup");
+		if(other.tag == "Item"){
+			print("got here");
+			GlassesScript glass = other.gameObject.GetComponent<GlassesScript>();
+			Inventory.Instance.AddItem(glass.item.itemID);
+		} 
+	}
 }
