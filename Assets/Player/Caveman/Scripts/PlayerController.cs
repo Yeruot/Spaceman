@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     // object and act accordingly
     private static PlayerController instance = null;
 
+    private float glassX = 0, glassY = 0, glassZ = 0;
+    private GameObject glasses = null;
+
     public static PlayerController Instance {
         get { return instance;}
     }
@@ -86,6 +89,17 @@ public class PlayerController : MonoBehaviour
 
         instance.movementVector.x = 0;
         instance.movementVector.z = 0;
+        if (glasses != null && glassX > 0 && glassY > 0 && glassZ > 0) {
+            if(glassX > transform.position.x - 0.25f && glassX < transform.position.x + 0.25f && 
+               glassZ > transform.position.z - 0.25f && glassZ < transform.position.z + 0.25f && 
+               glassY > transform.position.y - 0.25f && glassY < transform.position.y + 0.25f) {
+                //Hit it
+                GlassesScript glassesScript = glasses.GetComponent<GlassesScript>() as GlassesScript;
+                Inventory.Instance.AddItem(glassesScript.item.itemID);
+                Destroy ( glasses );
+                glasses = null;
+            }
+        }
     }
 
     public void attack ()
@@ -169,4 +183,11 @@ public class PlayerController : MonoBehaviour
 			Inventory.Instance.AddItem(glass.item.itemID);
 		} 
 	}
+
+    public void setGlassesPosition( Vector3 pos, GameObject pGlass ) {
+        glassX = pos.x;
+        glassY = pos.y;
+        glassZ = pos.z;
+        glasses = pGlass;
+    }
 }
