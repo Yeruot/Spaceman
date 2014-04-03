@@ -25,8 +25,6 @@ public class worldManager : MonoBehaviour {
 		width = Random.Range(51, 55);
 		length = Random.Range(50, 55);
 
-		print (width + "," + height + "," + length);
-
 		instance.worldBase = (Transform)Instantiate(worldBasePrefab, new Vector3(0f,0f,0f), Quaternion.identity);
 		instance.worldBase.localScale = new Vector3(width, instance.worldBase.localScale.y, length);
 
@@ -47,7 +45,6 @@ public class worldManager : MonoBehaviour {
 
 		for(int x = 0; x < width; x++){
 			for(int z = 0; z < length; z++){
-				print (x + ", " + z + ", " + heights[x, z]);
 				for(int y = 1; y <= heights[x, z]; y++){
 					Instantiate(voxelPrefab, new Vector3(x*unit, y*unit, z*unit), Quaternion.identity);
 				}
