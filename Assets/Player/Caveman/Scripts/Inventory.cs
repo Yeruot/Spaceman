@@ -136,6 +136,14 @@ public class Inventory : MonoBehaviour {
 			return -1;
 	}
 	
+	public int GetIndexOfItemName(string name){
+		int index = inventory.FindIndex(item => item.itemName == name);
+		
+		if (index >= 0)
+			return index;
+		else
+			return -1;
+	}
 
 	public void CreateToolTip(Item it){
 		tooltip = "";
@@ -155,5 +163,7 @@ public class Inventory : MonoBehaviour {
 		if(it.itemType == Item.ItemType.Consumable){
 			tooltip = tooltip + "<color=#ffffff>" + "Restore: " + "</color>" + "<color=#000fff>" + it.itemRestore + "</color>\n";
 		}
-	}					                    
+	}
+
+
 }

@@ -45,8 +45,11 @@ public class clubController : MonoBehaviour
 			print("hit cow");
 			CowController cowctrl = other.gameObject.GetComponent<CowController>();
 			cowctrl.hit();
+		} else if(other.tag == "Gideon"){
+			int index = Inventory.Instance.GetIndexOfItemName("Glasses");
+			if(index >= 0){
+				Inventory.Instance.RemoveItem(index);
+			}
 		}
-
     }
-
 }

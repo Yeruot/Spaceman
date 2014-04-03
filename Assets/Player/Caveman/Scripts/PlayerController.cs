@@ -145,4 +145,14 @@ public class PlayerController : MonoBehaviour {
 		currentDirection = 2;
 		this.movementVector += Vector3.back;
 	}
+
+	void OnCollisionEnter (Collision collision){
+		Collider other = collision.collider;
+		print ("suuup");
+		if(other.tag == "Item"){
+			print("got here");
+			GlassesScript glass = other.gameObject.GetComponent<GlassesScript>();
+			Inventory.Instance.AddItem(glass.item.itemID);
+		} 
+	}
 }
