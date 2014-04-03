@@ -107,10 +107,8 @@ public class Inventory : MonoBehaviour {
 	}
 
 	public void RemoveItem(int id){
-		for(int i = 0; i < inventory.Count; i++){
-			if (contains(id)){
+		if (contains(id)){
 				inventory[GetIndexOfItemID(id)] = new Item();
-			}
 		}
 	}
 
@@ -135,10 +133,12 @@ public class Inventory : MonoBehaviour {
 		else
 			return -1;
 	}
-	
+
+	//This is butchered do not use this in the future
+	// only use this for the demo
 	public int GetIndexOfItemName(string name){
 		int index = inventory.FindIndex(item => item.itemName == name);
-		
+
 		if (index >= 0)
 			return index;
 		else
