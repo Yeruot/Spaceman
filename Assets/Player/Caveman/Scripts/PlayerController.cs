@@ -106,12 +106,14 @@ public class PlayerController : MonoBehaviour {
 		default:
 			print ("currentDirection not properly set");
 			break;
-		}
+        }
+        Physics.IgnoreCollision (attackingWeapon.collider, collider);
 		grunt.Play();
 		instance.animator.SetTrigger("Attack");
 	}
 
 	public void jump(){
+        print ("fucL");
 		if((flags & CollisionFlags.Below) != 0)
 			instance.verticalSpeed = jumpSpeed;
 	}

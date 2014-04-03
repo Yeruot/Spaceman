@@ -93,6 +93,28 @@ public class World : MonoBehaviour
     }
 
     public void DestroyBlock(float x, float y, float z) {
-        data [Mathf.FloorToInt (x * 2), Mathf.CeilToInt (y * 2), Mathf.FloorToInt (z * 2)] = 0;
+        int dx = Mathf.FloorToInt (x * 2);
+        int dy = Mathf.CeilToInt (y * 2);
+        int dz = Mathf.FloorToInt (z * 2);
+        print (dx + " " + dy + " " + dz);
+        data [dx, dy, dz] = 0;
+        Chunk ch = chunks[dx/16, dy/16, dz/16].GetComponent<Chunk>() as Chunk;
+        ch.GenerateMesh();
+        if(dx % 16 == 0 && dx >= 16) {
+            ch = chunks[dx/16 - 1, dy/16, dz/16].GetComponent<Chunk>() as Chunk;
+            ch.GenerateMesh();
+        }
+        else if(dx % 16 == 15 && dx < worldX-16) {
+            ch = chunks[dx/16 + 1, dy/16, dz/16].GetComponent<Chunk>() as Chunk;
+            ch.GenerateMesh();
+        }
+        if(dz % 16 == 0 && dz >= 16) {
+            ch = chunks[dx/16, dy/16, dz/16-1].GetComponent<Chunk>() as Chunk;
+            ch.GenerateMesh();
+        }
+        else if(dz % 16 == 15 && dz < worldX-16) {
+            ch = chunks[dx/16, dy/16, dz/16+1].GetComponent<Chunk>() as Chunk;
+            ch.GenerateMesh();
+        }
     }
 }

@@ -264,7 +264,7 @@ public class Chunk : MonoBehaviour
 
     public void hit(float x, float y, float z) {
         world.DestroyBlock (x, y, z);
-        GenerateMesh ();
+        //GenerateMesh ();
     }
 
 }
