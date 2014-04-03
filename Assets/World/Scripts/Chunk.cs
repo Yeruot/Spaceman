@@ -42,7 +42,7 @@ public class Chunk : MonoBehaviour
    
     }
   
-    void GenerateMesh ()
+    public void GenerateMesh ()
     {
    
         for (int x=0; x<chunkSize; x++) {
@@ -260,7 +260,6 @@ public class Chunk : MonoBehaviour
         newUV.Clear ();
         newTriangles.Clear ();
         faceCount = 0;
-   
     }
 
     public void hit(float x, float y, float z) {
