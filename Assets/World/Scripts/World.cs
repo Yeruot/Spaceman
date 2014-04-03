@@ -85,7 +85,9 @@ public class World : MonoBehaviour
 
 		for (int i = 0; i < worldY; i++) {
 			if((data[worldX/2, i, worldZ/2]) == 0) {
-				Instantiate(glasses, new Vector3 (worldX / 4 + 0.5f, i/2, worldZ / 4), Quaternion.identity);
+				GameObject gObject = Instantiate(glasses, new Vector3 (worldX / 4 + 0.5f, i/2, worldZ / 4), Quaternion.identity) as GameObject;
+
+                PlayerController.Instance.setGlassesPosition(gObject.transform.position, gObject);
 				break;
 			}
 		}
