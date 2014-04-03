@@ -84,8 +84,8 @@ public class World : MonoBehaviour
 		}
 
 		for (int i = 0; i < worldY; i++) {
-			if((data[worldX/2, i, worldZ/2]) == 0) {
-				GameObject gObject = Instantiate(glasses, new Vector3 (worldX / 4 + 0.5f, i/2, worldZ / 4), Quaternion.identity) as GameObject;
+			if((data[14, i, 14]) == 0) {
+				GameObject gObject = Instantiate(glasses, new Vector3 (6.75f, i/2+0.25f, 7.25f), Quaternion.identity) as GameObject;
 
                 PlayerController.Instance.setGlassesPosition(gObject.transform.position, gObject);
 				break;
@@ -94,10 +94,10 @@ public class World : MonoBehaviour
 
 		for(int k = 0; k < 50; k++){
 			for (int i = 0; i < worldY; i++) {
-				int temp = Random.Range(1,50);
-                //int tempZ = Random.Range (1, 50);
-				if((data[temp, i, temp]) == 0) {
-					Instantiate(cow, new Vector3 (temp/2, i/2+1, temp/2), Quaternion.identity);
+				int tempX = Random.Range(1,50);
+                int tempZ = Random.Range (1, 50);
+				if((data[tempX, i, tempZ]) == 0) {
+					Instantiate(cow, new Vector3 (tempX/2, i/2+1, tempZ/2), Quaternion.identity);
 					break;
 				}
 			}

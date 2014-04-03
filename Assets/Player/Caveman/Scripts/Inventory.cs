@@ -51,7 +51,7 @@ public class Inventory : MonoBehaviour {
 	void OnGUI() {
 		showTooltip = false;
 		GUI.skin = slotSkin;
-		if(showInventory){
+        if(showInventory){
 			DrawInventory();
 		}
 		if(showTooltip){
@@ -95,12 +95,12 @@ public class Inventory : MonoBehaviour {
 	}
 
 	public void AddItem(int id){
-		for(int i = 0; i < inventory.Count; i++){
+        for(int i = 0; i < inventory.Count; i++){
 			if (inventory[i].itemName == null){
 				Item returnItem = itemManager.GetItemWithId(id);
 				if(returnItem != null){
 					inventory[i] = returnItem;
-				}
+                }
 				break;
 			}
 		}

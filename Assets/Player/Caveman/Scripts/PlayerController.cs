@@ -194,6 +194,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void fly() {
+        audioSources [1].Play ();
         dofly = 1;
     }
 }

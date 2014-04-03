@@ -33,7 +33,6 @@ public class ItemManager : MonoBehaviour {
 		items.Add(new Item("Basic Club", 2, "The club can't even handle me right now", 1, 2, 1, 0, 0, Item.ItemType.Weapon));
 		items.Add(new Item("Nut", 3, "You're going to love my nuts!", 0, 0, 0, 0, 100, Item.ItemType.Consumable));
 		items.Add(new Item("Glasses", 4, "DJ TURN THE VOLUME UP!", 10000, 10000, 100000, 10000, 10000, Item.ItemType.Quest));
-
 	}
 
 	public Item GetItemWithId(int id){
