@@ -14,7 +14,6 @@ public class SecondaryButtonController : InteractiveController {
 	}
 
 	public override void OnTouched(){
-		print ("Secondary Button Clicked");
 		PlayerController.Instance.jump();
 	}
 }

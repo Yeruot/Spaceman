@@ -19,6 +19,11 @@ public class GideonController : MonoBehaviour {
 	
 	private Time timer;
 
+    public string words = null;
+    private float wordsShown = 0;
+
+    private int state = 0;
+
 	private static GideonController instance = null;
 	public static GideonController Instance
 	{
@@ -64,4 +69,24 @@ public class GideonController : MonoBehaviour {
 		movementVector.x = 0;
 		movementVector.z = 0;
 	}
+
+    
+    void OnGUI()
+    {
+        if(words != null)
+        {
+            if(wordsShown == 0) wordsShown = Time.time;
+            GUI.Label(new Rect(Screen.width/2-100,Screen.height-200,600,600), "<color=#000000><size=30>" + words + "</size></color>");
+            if(Time.time - wordsShown > 2) {
+                words = null;
+                wordsShown = 0;
+            }
+        }
+    }
+
+    public void hit() {
+        if (state == 0) {
+            words = "HEY! Get my glasses.";
+        }
+    }
 }
