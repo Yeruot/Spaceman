@@ -22,6 +22,8 @@ public class GideonController : MonoBehaviour {
     public string words = null;
     private float wordsShown = 0;
 
+    public GUISkin skin;
+
     private int state = 0;
 
 	private static GideonController instance = null;
@@ -76,10 +78,13 @@ public class GideonController : MonoBehaviour {
         if(words != null)
         {
             if(wordsShown == 0) wordsShown = Time.time;
-            GUI.Label(new Rect(Screen.width/2-100,Screen.height-200,600,600), "<color=#000000><size=30>" + words + "</size></color>");
+            GUI.Box(new Rect(Screen.width/2-100,Screen.height-200,300,100), "<color=#ffffff><size=30>" + words + "</size></color>");
             if(Time.time - wordsShown > 2) {
                 words = null;
                 wordsShown = 0;
+                if(state == 1) {
+                    PlayerController.Instance.fly();
+                }
             }
         }
     }
@@ -87,6 +92,13 @@ public class GideonController : MonoBehaviour {
     public void hit() {
         if (state == 0) {
             words = "HEY! Get my glasses.";
+        } else if (state == 1) {
+            words = "Thanks bub. You can go now";
         }
     }
+
+	public void QuestComplete(){
+        state = 1;
+		animator.SetBool("Glasses", true);
+	}
 }

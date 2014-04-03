@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     private float glassX = 0, glassY = 0, glassZ = 0;
     private GameObject glasses = null;
+    private int dofly = 0;
 
     public static PlayerController Instance {
         get { return instance;}
@@ -68,6 +69,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
+        if (dofly == 1) {
+            instance.verticalSpeed = jumpSpeed;
+        }
         if (Input.GetKey ("w")) {
             moveUp ();
         } else if (Input.GetKey ("s")) {
@@ -176,9 +180,7 @@ public class PlayerController : MonoBehaviour
 
 	void OnCollisionEnter (Collision collision){
 		Collider other = collision.collider;
-		print ("suuup");
 		if(other.tag == "Item"){
-			print("got here");
 			GlassesScript glass = other.gameObject.GetComponent<GlassesScript>();
 			Inventory.Instance.AddItem(glass.item.itemID);
 		} 
@@ -189,5 +191,9 @@ public class PlayerController : MonoBehaviour
         glassY = pos.y;
         glassZ = pos.z;
         glasses = pGlass;
+    }
+
+    public void fly() {
+        dofly = 1;
     }
 }
